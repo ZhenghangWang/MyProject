@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">VolunteerManagement</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Center</string>
+    <string name="title_notifications">Message</string>
+</resources>

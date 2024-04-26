@@ -1,0 +1,20 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainBookActivity">
+    <item
+        android:id="@+id/action_report"
+        android:orderInCategory="100"
+        app:showAsAction="never"
+        android:title="Generate report"/>
+    <item
+        android:id="@+id/action_orderby_date"
+        android:orderInCategory="100"
+        app:showAsAction="never"
+        android:title="orderby date"/>
+    <item
+        android:id="@+id/action_orderby_name"
+        android:orderInCategory="100"
+        app:showAsAction="never"
+        android:title="orderby name"/>
+</menu>

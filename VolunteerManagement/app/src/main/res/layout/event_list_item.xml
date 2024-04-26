@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+
+    <TextView android:id="@+id/item_tv_id"
+        android:layout_width="fill_parent"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:padding="8dp">
+        <ImageView
+            android:id="@+id/item_iv_cover"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/addevent" />
+        <TextView
+            android:id="@+id/item_tv_title"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="username:"
+            android:textColor="@color/black"
+            android:textSize="15dp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical">
+        <ImageView
+            android:id="@+id/iv_status"
+            android:layout_margin="@dimen/text10"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="right"
+            android:background="@drawable/notfull" />
+        </LinearLayout>
+    </LinearLayout>
+
+        <TextView
+            android:id="@+id/item_tv_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:text="details:" />
+    <TextView
+        android:id="@+id/item_tv_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:text="date:" />
+    <TextView
+        android:id="@+id/item_tv_org_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:text="organisation_id:" />
+    <TextView
+        android:id="@+id/item_tv_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:text="max/current:" />
+    <TextView
+        android:id="@+id/item_tv_durr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:text="duration:" />
+    <TextView
+        android:id="@+id/item_tv_loc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:text="location:" />
+    <TextView
+        android:id="@+id/item_tv_skills"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:text="skills:" />
+      <LinearLayout
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:visibility="gone"
+          android:orientation="horizontal">
+        <Button
+            android:id="@+id/btnOK"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/text10"
+            android:background="@color/green_text"
+            android:textColor="@color/white"
+            android:text="APPROVE" />
+        <Button
+            android:id="@+id/btnNO"
+            android:layout_width="wrap_content"
+            android:layout_margin="@dimen/text10"
+            android:layout_height="wrap_content"
+            android:background="@color/red"
+            android:textColor="@color/white"
+            android:text="REJECT" />
+      </LinearLayout>
+
+
+
+</LinearLayout>

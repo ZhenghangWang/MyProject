@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+    <ImageView
+        android:id="@+id/btn_ok"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/ic_menu"/>
+
+    <android.widget.SearchView
+        android:id="@+id/searchview"
+        android:layout_width="match_parent"
+        android:layout_toLeftOf="@id/btn_ok"
+        android:layout_height="50dp"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:textColor="#000000"
+        app:iconifiedByDefault="false"
+        app:queryHint="search" />
+
+
+    <LinearLayout
+          android:id="@+id/ll"
+          android:layout_below="@+id/searchview"
+          android:layout_width="match_parent"
+          android:visibility="gone"
+          android:layout_height="30dp">
+          <TextView
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_weight="1"
+              android:gravity="center"
+
+              android:layout_gravity="center"
+              android:text="id"/>
+          <TextView
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_weight="1"
+              android:gravity="center"
+
+              android:layout_gravity="center"
+              android:text="title"/>
+          <TextView
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_weight="1"
+              android:gravity="center"
+
+              android:layout_gravity="center"
+              android:text="description"/>
+          <TextView
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_weight="1"
+              android:layout_gravity="center"
+              android:text="date"/>
+          <TextView
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_weight="1"
+              android:gravity="center"
+              android:layout_gravity="center"
+              android:text="location"/>
+
+      </LinearLayout>
+
+      <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+          android:id="@+id/swipe"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:layout_below="@+id/ll"
+          android:layout_marginTop="15dp">
+
+          <ListView
+              android:id="@+id/list"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:layout_marginBottom="50dp" />
+      </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+
+  </RelativeLayout>

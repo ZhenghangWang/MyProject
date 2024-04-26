@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+    <LinearLayout
+        android:id="@+id/ll"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tv_id"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:text="id"/>
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:text="from"/>
+        <TextView
+            android:id="@+id/tv_email"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:text="content"/>
+        <TextView
+            android:id="@+id/tv_volid"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:visibility="gone"
+            android:layout_gravity="center"
+            android:text="Volunteer_id"/>
+        <TextView
+            android:id="@+id/tv_eventid"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:visibility="gone"
+            android:layout_gravity="center"
+            android:text="Event_id"/>
+        <TextView
+            android:id="@+id/tv_status"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:text="Status"/>
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/btnNO"
+        android:layout_width="wrap_content"
+        android:padding="@dimen/text10"
+        android:layout_marginRight="@dimen/text10"
+        android:layout_height="match_parent"
+        android:layout_gravity="right"
+        android:gravity="right"
+        android:background="@color/colorPrimaryBlue"
+        android:textSize="@dimen/text10"
+        android:textColor="@color/white"
+        android:text="Resolve" />
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/dp_20"
+        android:visibility="gone"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/btnOK"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:visibility="gone"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/text20"
+            android:layout_marginRight="@dimen/text20"
+            android:textColor="@color/green_text"
+            android:textSize="@dimen/text10"
+            android:text="APPROVE" />
+
+    </LinearLayout>
+
+</LinearLayout>
