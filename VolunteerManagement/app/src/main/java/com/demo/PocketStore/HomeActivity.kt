@@ -1,19 +1,29 @@
 package com.demo.PocketStore
 
+import androidx.appcompat.app.AppCompatActivity
 import android.view.View
+import android.widget.EditText
+import android.widget.Button
+import com.demo.PocketStore.db.manager.EventDataManager
 import android.os.Bundle
+import android.content.pm.ActivityInfo
 import android.view.Window
+import com.demo.PocketStore.R
 import android.app.Activity
 import android.app.AlertDialog
 import android.content.Context
 import android.content.Intent
+import android.util.Log
 import android.widget.Toast
 import android.widget.AdapterView.OnItemClickListener
 import android.widget.TextView
+import com.demo.PocketStore.db.manager.AppDataManager
 import android.widget.ListView
+import com.demo.PocketStore.adapter.AppListAdapter
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout.OnRefreshListener
 import android.widget.AdapterView
+import com.demo.PocketStore.RatingActivity
 import androidx.viewpager.widget.ViewPager
 import androidx.viewpager.widget.PagerAdapter
 import android.widget.LinearLayout
@@ -27,6 +37,31 @@ import androidx.viewpager.widget.ViewPager.OnPageChangeListener
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import com.demo.PocketStore.adapter.ManagerListAdapter
+import com.demo.PocketStore.ResolveIssueActivity
+import com.demo.PocketStore.SendMsgActivity
+import com.demo.PocketStore.RecMsgActivity
+import android.content.DialogInterface
+import com.google.android.material.bottomnavigation.BottomNavigationView
+import androidx.navigation.ui.AppBarConfiguration
+import androidx.navigation.NavController
+import androidx.navigation.Navigation
+import androidx.navigation.ui.NavigationUI
+import android.widget.RatingBar
+import com.demo.PocketStore.db.manager.MsgDataManager
+import com.demo.PocketStore.adapter.MsgListAdapter
+import com.demo.PocketStore.db.manager.IssueDataManager
+import com.demo.PocketStore.adapter.IssueListAdapter
+import android.widget.Spinner
+import com.demo.PocketStore.db.manager.VolDataManager
+import android.widget.ArrayAdapter
+import java.util.stream.Collectors
+import androidx.appcompat.widget.AppCompatButton
+import android.os.Build
+import android.content.pm.PackageManager
+import com.demo.PocketStore.HomeActivity
+import com.demo.PocketStore.MainActivity
+import com.demo.PocketStore.SignupActivity
+import com.demo.PocketStore.SigninActivity
 import com.demo.PocketStore.db.bean.*
 import java.text.SimpleDateFormat
 import java.util.*
@@ -232,6 +267,7 @@ class HomeActivity : Activity(), View.OnClickListener, OnItemClickListener {
                 tvSetting!!.setTextColor(resources.getColor(R.color.colorAccentBlue)) //并将字体颜色点亮
                 tvTopTitle!!.text = "Resolve"
             }
+            R.id.l_issue_send -> startActivity(Intent(this, ResolveIssueActivity::class.java))
             R.id.l_msg_send -> startActivity(Intent(this, SendMsgActivity::class.java))
             R.id.l_msg_rec -> startActivity(Intent(this, RecMsgActivity::class.java))
             else -> {}

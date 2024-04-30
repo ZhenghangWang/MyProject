@@ -10,7 +10,6 @@ import android.content.pm.ActivityInfo
 import android.view.Window
 import com.demo.PocketStore.R
 import android.app.Activity
-import android.content.Context
 import android.content.Intent
 import android.util.Log
 import com.demo.PocketStore.db.bean.EventData
@@ -71,44 +70,94 @@ import com.demo.PocketStore.HomeActivity
 import com.demo.PocketStore.MainActivity
 import com.demo.PocketStore.SignupActivity
 import com.demo.PocketStore.SigninActivity
-import com.demo.PocketStore.common.Config.myEventList
 
-class ShowReportActivity : AppCompatActivity() {
+//ResolveIssue
+class ResolveIssueActivity : AppCompatActivity(), View.OnClickListener, OnItemClickListener {
+    private val TAG = "ResolveIssueActivity"
     var toolbar: Toolbar? = null
-    private var mContext: Context? = null
-    var username: TextView? = null
-    var carname: TextView? = null
-    private var mDataManager: AppDataManager? = null
+    var btn_pending: Button? = null
+    var btn_resolved: Button? = null
+    private var mDataManager: IssueDataManager? = null
+    private val dataList: MutableList<IssueData> = ArrayList()
+    var list: ListView? = null
+    var adapter2: IssueListAdapter? = null
+    private var swipe: SwipeRefreshLayout? = null
+    var status = "0"
     override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
+        requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
         // hide ActionBar
         supportRequestWindowFeature(Window.FEATURE_NO_TITLE)
-        setContentView(R.layout.activity_showreport)
-        mContext = this
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_reslove_issue)
         toolbar = findViewById<View>(R.id.toolbar) as Toolbar
-        toolbar!!.title = "Reports"
+        toolbar!!.title = "Resolve Issue"
         setSupportActionBar(toolbar)
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)
         toolbar!!.setNavigationOnClickListener { //update return last activity
             setResult(RESULT_OK, Intent())
             finish()
         }
-        username = findViewById(R.id.tv_table_name)
-        carname = findViewById(R.id.tv_table_carname)
-        username?.setText(myEventList.size.toString() + "")
+        initViews()
+    }
+
+    private fun initViews() {
+        btn_pending = findViewById<View>(R.id.btn_pending) as Button
+        btn_resolved = findViewById<View>(R.id.btn_resolved) as Button
+        list = findViewById(R.id.list)
+        list?.setOnItemClickListener(this)
+        swipe = findViewById(R.id.swipe)
+        initdata()
+    }
+
+    private fun initdata() {
+        //改变加载显示的颜色
+        swipe!!.setColorSchemeColors(
+            resources.getColor(R.color.red),
+            resources.getColor(R.color.red)
+        )
+        //设置向下拉多少出现刷新
+        swipe!!.setDistanceToTriggerSync(200)
+        //设置刷新出现的位置
+        swipe!!.setProgressViewEndTarget(false, 200)
+        swipe!!.setOnRefreshListener {
+            swipe!!.isRefreshing = false
+            loadRating()
+        }
+        btn_pending!!.setBackgroundColor(getColor(R.color.colorAccentOrange))
+        btn_resolved!!.setBackgroundColor(getColor(R.color.colorAccentBlue))
+        loadRating()
+    }
+
+    private fun loadRating() {
         if (mDataManager == null) {
-            mDataManager = AppDataManager(this)
+            mDataManager = IssueDataManager(this)
             mDataManager!!.openDataBase()
         }
-        val appDataList = mDataManager!!.allDataList
-        val myAppList: MutableList<AppData> = ArrayList()
-        for (eventData in myEventList) {
-            for (appData in appDataList) {
-                if (appData.event_id == eventData!!.id) {
-                    myAppList.add(appData)
-                }
+        dataList.clear()
+        val loadList = mDataManager!!.allDataList
+        for (issueData in loadList) {
+            if (status == issueData.status) {
+                dataList.add(issueData)
             }
         }
-        carname?.setText(myAppList.size.toString() + "")
+        adapter2 = IssueListAdapter(dataList, this)
+        list!!.adapter = adapter2
+        adapter2!!.notifyDataSetChanged()
+    }
+
+    override fun onClick(v: View) {}
+    override fun onItemClick(parent: AdapterView<*>?, view: View, position: Int, id: Long) {}
+    fun onClickPending(view: View?) {
+        btn_pending!!.setBackgroundColor(getColor(R.color.colorAccentOrange))
+        btn_resolved!!.setBackgroundColor(getColor(R.color.colorAccentBlue))
+        status = "0"
+        loadRating()
+    }
+
+    fun onClickResolved(view: View?) {
+        btn_resolved!!.setBackgroundColor(getColor(R.color.colorAccentOrange))
+        btn_pending!!.setBackgroundColor(getColor(R.color.colorAccentBlue))
+        status = "1"
+        loadRating()
     }
 }
