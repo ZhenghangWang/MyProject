@@ -64,7 +64,7 @@ class RatingDataManager(context: Context?) {
         }
     }
 
-    //打开数据库
+    //OPEN
     @Throws(SQLException::class)
     fun openDataBase() {
         if (mDatabaseHelper == null) {
@@ -74,7 +74,7 @@ class RatingDataManager(context: Context?) {
         }
     }
 
-    //关闭数据库
+    //CLOSE
     @Throws(SQLException::class)
     fun closeDataBase() {
         mDatabaseHelper!!.close()

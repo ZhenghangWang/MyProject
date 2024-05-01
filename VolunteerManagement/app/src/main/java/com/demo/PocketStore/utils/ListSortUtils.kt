@@ -16,7 +16,6 @@ object ListSortUtils {
 //                    return -1;
 //                }
         }
-        //这里就会自动根据规则进行排序
         Collections.sort(listInAppxList, comparator)
         return listInAppxList
     }
@@ -31,7 +30,6 @@ object ListSortUtils {
 //                    return -1;
 //                }
         }
-        //这里就会自动根据规则进行排序
         Collections.sort(listInAppxList, comparator)
         return listInAppxList
     }

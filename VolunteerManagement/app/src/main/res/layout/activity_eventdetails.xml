@@ -41,7 +41,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="5dp"
-        android:text="title" />
+        android:text="Title" />
 
     <TextView
         android:id="@+id/input_desc"
@@ -49,7 +49,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="5dp"
-        android:text="description" />
+        android:text="Description" />
 
 
     <TextView
@@ -58,7 +58,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="5dp"
-        android:text="date" />
+        android:text="Date" />
 
     <TextView
         android:id="@+id/input_max"
@@ -66,7 +66,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="5dp"
-        android:text="max_application" />
+        android:text="Max_application" />
 
     <TextView
         android:id="@+id/input_cur"
@@ -74,7 +74,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="5dp"
-        android:text="current" />
+        android:text="Current" />
 
     <TextView
         android:id="@+id/input_dur"
@@ -82,7 +82,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="5dp"
-        android:text="duration" />
+        android:text="Duration" />
 
     <TextView
         android:id="@+id/input_loc"
@@ -90,7 +90,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="5dp"
-        android:text="location" />
+        android:text="Location" />
 
     <TextView
         android:id="@+id/input_skills"
@@ -98,7 +98,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="5dp"
-        android:text="skills_required" />
+        android:text="Skills_required" />
 
     <Button
         android:id="@+id/btn_ok"
@@ -119,21 +119,21 @@
             android:layout_weight="1"
             android:gravity="center"
             android:layout_gravity="center"
-            android:text="id"/>
+            android:text="Id"/>
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"
             android:layout_gravity="center"
-            android:text="name"/>
+            android:text="Name"/>
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="2"
             android:gravity="center"
             android:layout_gravity="center"
-            android:text="email"/>
+            android:text="Email"/>
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"

@@ -31,7 +31,7 @@
         android:id="@+id/et_input"
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:hint="please input issue..."
+        android:hint="Please input issue..."
         android:layout_gravity="left"
         android:gravity="top"
         android:layout_margin="@dimen/text10"

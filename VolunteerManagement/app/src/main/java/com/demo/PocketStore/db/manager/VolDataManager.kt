@@ -44,7 +44,6 @@ class VolDataManager(context: Context?) {
 
     }
 
-    //UserData manager_User = new UserData("wky","wky");
     private var mSQLiteDatabase: SQLiteDatabase? = null
     private var mDatabaseHelper: DBManagementHelper? = null
 

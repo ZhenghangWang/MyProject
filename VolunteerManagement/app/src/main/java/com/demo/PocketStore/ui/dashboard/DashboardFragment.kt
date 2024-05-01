@@ -121,11 +121,11 @@ class DashboardFragment : Fragment(), View.OnClickListener {
         var title = ""
         when (type) {
             1 -> {
-                title = "please input phone "
+                title = "Please input phone "
                 editText.inputType = InputType.TYPE_CLASS_NUMBER
             }
             2 -> {
-                title = "please input email "
+                title = "Please input email "
                 editText.inputType = InputType.TYPE_TEXT_VARIATION_EMAIL_ADDRESS
             }
             else -> {}
@@ -136,7 +136,7 @@ class DashboardFragment : Fragment(), View.OnClickListener {
                 val input = editText.text.toString()
                 if (input == "") {
                     Toast.makeText(
-                        activity, "input is empty！$input",
+                        activity, "Input is empty！$input",
                         Toast.LENGTH_SHORT
                     ).show()
                 } else {
@@ -184,7 +184,7 @@ class DashboardFragment : Fragment(), View.OnClickListener {
                 }
             }
         } else {
-            Toast.makeText(activity, "canceled", Toast.LENGTH_SHORT).show()
+            Toast.makeText(activity, "Canceled", Toast.LENGTH_SHORT).show()
         }
         super.onActivityResult(requestCode, resultCode, data)
     }
@@ -195,7 +195,7 @@ class DashboardFragment : Fragment(), View.OnClickListener {
             Config.curUser!!.userPro = path
             updateUser()
         } else {
-            Toast.makeText(activity, "failed to get image", Toast.LENGTH_SHORT)
+            Toast.makeText(activity, "Failed to get image", Toast.LENGTH_SHORT)
         }
     }
 
@@ -206,9 +206,9 @@ class DashboardFragment : Fragment(), View.OnClickListener {
         }
         val flag = mUserDataManager!!.updateUserDataById(Config.curUser, Config.curUser!!.userId)
         if (flag) {
-            Toast.makeText(activity, "update successfully", Toast.LENGTH_SHORT).show()
+            Toast.makeText(activity, "Update successfully", Toast.LENGTH_SHORT).show()
         } else {
-            Toast.makeText(activity, "update failed...", Toast.LENGTH_SHORT).show()
+            Toast.makeText(activity, "Update failed...", Toast.LENGTH_SHORT).show()
         }
     }
 }

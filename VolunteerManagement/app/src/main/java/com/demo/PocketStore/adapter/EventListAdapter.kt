@@ -110,15 +110,15 @@ class EventListAdapter(private val list: List<EventData>?, private val mContext:
         }
         val meal = list!![position]
         holder!!.item_tv_id!!.text = meal.id.toString() + ""
-        holder.item_tv_title!!.text = "title:" + meal.title + ""
-        holder.item_tv_desc!!.text = "description:" + meal.description + ""
-        holder.item_tv_date!!.text = "date:" + meal.date + ""
-        holder.item_tv_org_id!!.text = "organisation_id:" + meal.organisation_id + ""
+        holder.item_tv_title!!.text = "Title:" + meal.title + ""
+        holder.item_tv_desc!!.text = "Description:" + meal.description + ""
+        holder.item_tv_date!!.text = "Date:" + meal.date + ""
+        holder.item_tv_org_id!!.text = "Organisation_id:" + meal.organisation_id + ""
         holder.item_tv_status!!.text =
             "max/current:" + meal.max_application + "/" + meal.current_application
-        holder.item_tv_durr!!.text = "duration:" + meal.duration + ""
-        holder.item_tv_loc!!.text = "location:" + meal.location + ""
-        holder.item_tv_skills!!.text = "skills_required:" + meal.skills_required + ""
+        holder.item_tv_durr!!.text = "Duration:" + meal.duration + ""
+        holder.item_tv_loc!!.text = "Location:" + meal.location + ""
+        holder.item_tv_skills!!.text = "Skills_required:" + meal.skills_required + ""
         if (meal.current_application < meal.max_application) {
             holder.iv_status!!.background = mContext!!.resources.getDrawable(R.drawable.notfull)
         } else {

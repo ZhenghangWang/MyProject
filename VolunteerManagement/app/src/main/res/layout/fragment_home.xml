@@ -38,7 +38,7 @@
               android:gravity="center"
 
               android:layout_gravity="center"
-              android:text="id"/>
+              android:text="Id"/>
           <TextView
               android:layout_width="0dp"
               android:layout_height="wrap_content"
@@ -46,7 +46,7 @@
               android:gravity="center"
 
               android:layout_gravity="center"
-              android:text="title"/>
+              android:text="Title"/>
           <TextView
               android:layout_width="0dp"
               android:layout_height="wrap_content"
@@ -54,20 +54,20 @@
               android:gravity="center"
 
               android:layout_gravity="center"
-              android:text="description"/>
+              android:text="Description"/>
           <TextView
               android:layout_width="0dp"
               android:layout_height="wrap_content"
               android:layout_weight="1"
               android:layout_gravity="center"
-              android:text="date"/>
+              android:text="Date"/>
           <TextView
               android:layout_width="0dp"
               android:layout_height="wrap_content"
               android:layout_weight="1"
               android:gravity="center"
               android:layout_gravity="center"
-              android:text="location"/>
+              android:text="Location"/>
 
       </LinearLayout>
 

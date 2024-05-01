@@ -121,7 +121,7 @@ class SendMsgActivity : AppCompatActivity(), View.OnClickListener {
         spinner_sd?.setOnItemSelectedListener(object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(
                 parent: AdapterView<*>?,
-                view: View,
+                view: View?,
                 position: Int,
                 id: Long
             ) {
@@ -148,7 +148,7 @@ class SendMsgActivity : AppCompatActivity(), View.OnClickListener {
         spinner_sd1!!.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(
                 parent: AdapterView<*>?,
-                view: View,
+                view: View?,
                 position: Int,
                 id: Long
             ) {

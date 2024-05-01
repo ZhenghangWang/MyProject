@@ -15,7 +15,7 @@
             android:gravity="center"
             android:background="@drawable/textview_border"
             android:layout_gravity="center"
-            android:text="id"/>
+            android:text="Id"/>
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -24,7 +24,7 @@
             android:background="@drawable/textview_border"
 
             android:layout_gravity="center"
-            android:text="name"/>
+            android:text="Name"/>
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -33,7 +33,7 @@
             android:background="@drawable/textview_border"
 
             android:layout_gravity="center"
-            android:text="org_id"/>
+            android:text="Org_id"/>
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -42,7 +42,7 @@
             android:background="@drawable/textview_border"
 
             android:layout_gravity="center"
-            android:text="vol_id"/>
+            android:text="Vol_id"/>
 
         <TextView
             android:layout_width="0dp"
@@ -52,7 +52,7 @@
             android:background="@drawable/textview_border"
 
             android:layout_gravity="center"
-            android:text="rating"/>
+            android:text="Rating"/>
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -61,7 +61,7 @@
             android:background="@drawable/textview_border"
 
             android:layout_gravity="center"
-            android:text="review"/>
+            android:text="Review"/>
 
     </LinearLayout>
     <RelativeLayout

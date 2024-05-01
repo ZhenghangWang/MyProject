@@ -137,15 +137,15 @@ class EventDetialsActivity : AppCompatActivity(), View.OnClickListener, OnItemCl
     }
 
     private fun initdata() {
-        org_id!!.text = "organisation_id:" + curUser!!.userId + ""
-        input_title!!.text = "title:" + eventData!!.title + ""
-        input_desc!!.text = "description:" + eventData!!.description + ""
-        input_date!!.text = "date:" + eventData!!.date + ""
-        input_max!!.text = "max_application:" + eventData!!.max_application
-        input_cur!!.text = "current_application:" + eventData!!.current_application
-        input_dur!!.text = "duration:" + eventData!!.duration
-        input_loc!!.text = "location:" + eventData!!.location
-        input_skills!!.text = "skills_required:" + eventData!!.skills_required
+        org_id!!.text = "Organisation_id:" + curUser!!.userName + ""
+        input_title!!.text = "Title:" + eventData!!.title + ""
+        input_desc!!.text = "Description:" + eventData!!.description + ""
+        input_date!!.text = "Date:" + eventData!!.date + ""
+        input_max!!.text = "Max_application:" + eventData!!.max_application
+        input_cur!!.text = "Current_application:" + eventData!!.current_application
+        input_dur!!.text = "Duration:" + eventData!!.duration
+        input_loc!!.text = "Location:" + eventData!!.location
+        input_skills!!.text = "Skills_required:" + eventData!!.skills_required
         //改变加载显示的颜色
         swipe!!.setColorSchemeColors(
             resources.getColor(R.color.red),

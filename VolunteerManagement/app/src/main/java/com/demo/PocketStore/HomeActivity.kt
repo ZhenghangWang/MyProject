@@ -292,12 +292,12 @@ class HomeActivity : Activity(), View.OnClickListener, OnItemClickListener {
     override fun onItemClick(parent: AdapterView<*>, view: View, position: Int, id: Long) {
         val ratingData = parent.adapter.getItem(position) as RatingData
         AlertDialog.Builder(this).setIcon(R.mipmap.ic_launcher).setTitle("Delete")
-            .setMessage("delete this Rating ?").setPositiveButton("yes") { dialogInterface, i ->
+            .setMessage("Delete this Rating ?").setPositiveButton("Yes") { dialogInterface, i ->
                 mDataManager!!.deleteUserData(ratingData.id)
                 initData()
-                Toast.makeText(applicationContext, "delete Successfully!", Toast.LENGTH_SHORT)
+                Toast.makeText(applicationContext, "Delete Successfully!", Toast.LENGTH_SHORT)
                     .show()
-            }.setNegativeButton("no", null).show()
+            }.setNegativeButton("No", null).show()
     }
 
     companion object {

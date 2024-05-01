@@ -69,6 +69,6 @@ class Volunteer {
         this.birthday = birthday
     }
 
-    constructor() : super() {  //这里只采用用户名和密码
+    constructor() : super() {
     }
 }

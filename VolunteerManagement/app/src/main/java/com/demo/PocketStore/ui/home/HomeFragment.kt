@@ -104,9 +104,9 @@ class HomeFragment : Fragment(), OnItemLongClickListener, OnItemClickListener {
     }
 
     private fun showMenuDialog() {
-        AlertDialog.Builder(context).setTitle("please select")
+        AlertDialog.Builder(context).setTitle("Please select")
             .setItems(
-                arrayOf("add event", "show report", "order by title", "order by date", "My Rating")
+                arrayOf("Add event", "Show report", "Order by title", "Order by date", "My rating")
             ) { dialog, which ->
                 when (which) {
                     0 -> startActivity(Intent(activity, AddEventActivity::class.java))
@@ -155,15 +155,15 @@ class HomeFragment : Fragment(), OnItemLongClickListener, OnItemClickListener {
         id: Long
     ): Boolean {
         val eventData = parent.adapter.getItem(position) as EventData
-        AlertDialog.Builder(activity).setIcon(R.mipmap.ic_launcher).setTitle("delete")
-            .setMessage("delete this event?")
-            .setPositiveButton("confirm") { dialogInterface, i -> //ToDo: 你想做的事情
+        AlertDialog.Builder(activity).setIcon(R.mipmap.ic_launcher).setTitle("Delete")
+            .setMessage("Delete this event?")
+            .setPositiveButton("Confirm") { dialogInterface, i -> //ToDo: 你想做的事情
                 mDataManager!!.openDataBase()
                 mDataManager!!.deleteUserData(eventData.id)
                 initData()
-                Toast.makeText(activity, "delete successfully", Toast.LENGTH_SHORT).show()
+                Toast.makeText(activity, "Delete successfully", Toast.LENGTH_SHORT).show()
             }
-            .setNegativeButton("cancel", null).show()
+            .setNegativeButton("Cancel", null).show()
         return true
     }
 

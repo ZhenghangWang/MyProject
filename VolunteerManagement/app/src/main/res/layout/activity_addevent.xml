@@ -35,55 +35,55 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="10dp"
-        android:text="title" />
+        android:text="Title" />
     <EditText
         android:id="@+id/input_title"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:padding="10dp"
-        android:hint="please input" />
+        android:hint="Please input" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="10dp"
-        android:text="description" />
+        android:text="Description" />
     <EditText
         android:id="@+id/input_desc"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:padding="10dp"
-        android:hint="please input" />
+        android:hint="Please input" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="10dp"
-        android:text="date" />
+        android:text="Date" />
     <EditText
         android:id="@+id/input_date"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:padding="10dp"
         android:inputType="textEmailAddress"
-        android:hint="please input" />
+        android:hint="Please input" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="10dp"
-        android:text="max_application" />
+        android:text="Max_application" />
     <EditText
         android:id="@+id/input_max"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:padding="10dp"
         android:inputType="number"
-        android:hint="please input" />
+        android:hint="Please input" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="10dp"
         android:visibility="gone"
-        android:text="current" />
+        android:text="Current" />
     <EditText
         android:id="@+id/input_cur"
         android:layout_width="fill_parent"
@@ -91,40 +91,40 @@
         android:padding="10dp"
         android:visibility="gone"
         android:inputType="number"
-        android:hint="please input" />
+        android:hint="Please input" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="10dp"
-        android:text="duration" />
+        android:text="Duration" />
     <EditText
         android:id="@+id/input_dur"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:padding="10dp"
-        android:hint="please input" />
+        android:hint="Please input" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="10dp"
-        android:text="location" />
+        android:text="Location" />
     <EditText
         android:id="@+id/input_loc"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:padding="10dp"
-        android:hint="please input" />
+        android:hint="Please input" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="10dp"
-        android:text="skills_required" />
+        android:text="Skills_required" />
     <EditText
         android:id="@+id/input_skills"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:padding="10dp"
-        android:hint="please input" />
+        android:hint="Please input" />
     <Button
         android:id="@+id/btn_ok"
         android:layout_width="fill_parent"
@@ -132,7 +132,7 @@
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:background="@color/colorPrimary"
-        android:text="add" />
+        android:text="Add" />
 
     </LinearLayout>
     </ScrollView>

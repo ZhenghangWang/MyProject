@@ -104,7 +104,7 @@ class ManagerListAdapter(private val list: List<UserData>, private val mContext:
         val meal = list[position]
         holder!!.item_tv_id?.setText(meal.userId.toString() + "")
         holder.item_tv_title?.setText(meal.userName + "")
-        holder.item_tv_desc!!.text = "status: " + meal.userStatus + ""
+        holder.item_tv_desc!!.text = "Status: " + meal.userStatus + ""
         holder.btnOK!!.setOnClickListener {
             meal.userStatus = "1"
             modifyDataBase(meal)

@@ -73,7 +73,6 @@ class AppDataManager(context: Context?) {
         }
     }
 
-    //关闭数据库
     @Throws(SQLException::class)
     fun closeDataBase() {
         mDatabaseHelper!!.close()
@@ -174,7 +173,6 @@ class AppDataManager(context: Context?) {
     }
 
     companion object {
-        //一些宏定义和声明
         private const val TAG = "EventDataManager"
         private const val DB_NAME = "Organisation"
         private const val TABLE_NAME = "application"

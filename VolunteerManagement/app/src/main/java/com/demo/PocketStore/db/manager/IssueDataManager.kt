@@ -64,7 +64,6 @@ class IssueDataManager(context: Context?) {
         }
     }
 
-    //打开数据库
     @Throws(SQLException::class)
     fun openDataBase() {
         if (mDatabaseHelper == null) {
@@ -74,7 +73,6 @@ class IssueDataManager(context: Context?) {
         }
     }
 
-    //关闭数据库
     @Throws(SQLException::class)
     fun closeDataBase() {
         mDatabaseHelper!!.close()

@@ -43,8 +43,7 @@ class MsgDataManager(context: Context?) {
     private var mSQLiteDatabase: SQLiteDatabase? = null
     private var mDatabaseHelper: DataBaseManagementHelper? = null
 
-    //  long i= insertUserData( manager_User);//插入管理员
-    //DataBaseManagementHelper继承自SQLiteOpenHelper
+
     private class DataBaseManagementHelper internal constructor(context: Context?) :
         SQLiteOpenHelper(context, TABLE_NAME, null, DB_VERSION) {
         override fun onCreate(db: SQLiteDatabase) {
